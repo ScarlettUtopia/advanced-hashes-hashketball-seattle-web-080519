@@ -168,9 +168,9 @@ team_names
 def player_numbers(team_name)
   array = []
   game_hash.each do |team_name, data|
-    data[team_name].each do |key, value|
-      if value == team_name
-        array.push(game_hash[team_name] [:players] [:numbers])
+    data[:team_name].each do |key, value|
+      if value == :numbers
+        array.push([:team_name] [:players] [:numbers])
       end
     end
   end
